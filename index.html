@@ -7,20 +7,20 @@
   <title>Enrique Garcia de Alfonso | Online CV</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
-      --bg: #f5efe4;
-      --bg-soft: #efe4d0;
-      --surface: rgba(255, 250, 241, 0.86);
-      --surface-strong: #fffaf2;
-      --ink: #1c2a2e;
-      --muted: #556469;
-      --line: rgba(28, 42, 46, 0.12);
-      --accent: #0c7c73;
-      --accent-2: #dd6c4f;
-      --accent-3: #f0b44c;
-      --shadow: 0 28px 60px rgba(28, 42, 46, 0.12);
+      --bg: #07111a;
+      --bg-soft: #0d1722;
+      --surface: rgba(13, 23, 34, 0.82);
+      --surface-strong: rgba(19, 34, 50, 0.92);
+      --ink: #d8e4f0;
+      --muted: #8aa0b6;
+      --line: rgba(102, 149, 194, 0.18);
+      --accent: #33d1ff;
+      --accent-2: #2dd4bf;
+      --accent-3: #7ee787;
+      --shadow: 0 28px 60px rgba(0, 0, 0, 0.32);
       --radius-xl: 32px;
       --radius-lg: 24px;
       --radius-md: 18px;
@@ -37,12 +37,12 @@
 
     body {
       margin: 0;
-      font-family: "Manrope", sans-serif;
+      font-family: "IBM Plex Sans", sans-serif;
       color: var(--ink);
       background:
-        radial-gradient(circle at top left, rgba(12, 124, 115, 0.18), transparent 28%),
-        radial-gradient(circle at 85% 15%, rgba(221, 108, 79, 0.16), transparent 20%),
-        linear-gradient(180deg, #fbf6ed 0%, #f5efe4 45%, #efe5d7 100%);
+        radial-gradient(circle at top left, rgba(51, 209, 255, 0.14), transparent 28%),
+        radial-gradient(circle at 82% 14%, rgba(45, 212, 191, 0.1), transparent 24%),
+        linear-gradient(180deg, #07111a 0%, #0a1520 52%, #0e1b28 100%);
       min-height: 100vh;
     }
 
@@ -52,10 +52,25 @@
       inset: 0;
       pointer-events: none;
       background-image:
-        linear-gradient(rgba(28, 42, 46, 0.025) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(28, 42, 46, 0.025) 1px, transparent 1px);
-      background-size: 34px 34px;
-      mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.65), transparent 90%);
+        linear-gradient(rgba(97, 132, 168, 0.08) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(97, 132, 168, 0.08) 1px, transparent 1px),
+        linear-gradient(180deg, transparent 0%, rgba(51, 209, 255, 0.06) 100%);
+      background-size: 42px 42px, 42px 42px, 100% 100%;
+      mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.88), transparent 96%);
+      opacity: 0.7;
+    }
+
+    body::after {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      background:
+        radial-gradient(circle at 14% 18%, rgba(51, 209, 255, 0.18), transparent 0 3px, transparent 4px),
+        radial-gradient(circle at 78% 20%, rgba(45, 212, 191, 0.16), transparent 0 3px, transparent 4px),
+        linear-gradient(120deg, transparent 0 18%, rgba(51, 209, 255, 0.06) 18% 18.3%, transparent 18.3% 100%),
+        linear-gradient(62deg, transparent 0 68%, rgba(45, 212, 191, 0.05) 68% 68.2%, transparent 68.2% 100%);
+      opacity: 0.45;
     }
 
     a {
@@ -79,15 +94,15 @@
       top: 18px;
       z-index: 10;
       backdrop-filter: blur(14px);
-      background: rgba(255, 250, 241, 0.7);
-      border: 1px solid rgba(28, 42, 46, 0.08);
+      background: rgba(7, 17, 26, 0.72);
+      border: 1px solid rgba(102, 149, 194, 0.18);
       border-radius: 999px;
       padding: 10px 16px;
       display: flex;
       align-items: center;
       justify-content: space-between;
       gap: 16px;
-      box-shadow: 0 12px 30px rgba(28, 42, 46, 0.08);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.28);
     }
 
     .brand {
@@ -100,13 +115,17 @@
     .brand-mark {
       width: 44px;
       height: 44px;
-      border-radius: 50%;
+      border-radius: 14px;
       display: grid;
       place-items: center;
-      font-weight: 800;
-      color: #fff;
-      background: linear-gradient(135deg, var(--accent), #164b56);
-      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.35);
+      font-family: "IBM Plex Mono", monospace;
+      font-weight: 600;
+      color: var(--accent);
+      background:
+        linear-gradient(180deg, rgba(51, 209, 255, 0.14), rgba(51, 209, 255, 0.04)),
+        rgba(19, 34, 50, 0.9);
+      border: 1px solid rgba(51, 209, 255, 0.3);
+      box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.03), 0 0 24px rgba(51, 209, 255, 0.14);
     }
 
     .brand-copy strong,
@@ -120,6 +139,7 @@
     .brand-copy span {
       color: var(--muted);
       font-size: 0.84rem;
+      font-family: "IBM Plex Mono", monospace;
     }
 
     .nav {
@@ -131,8 +151,11 @@
     }
 
     .nav a {
-      font-size: 0.95rem;
+      font-size: 0.88rem;
+      font-family: "IBM Plex Mono", monospace;
       color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
       transition: color 160ms ease, transform 160ms ease;
     }
 
@@ -151,20 +174,47 @@
 
     .card {
       background: var(--surface);
-      border: 1px solid rgba(255, 255, 255, 0.55);
+      border: 1px solid rgba(102, 149, 194, 0.14);
       box-shadow: var(--shadow);
       border-radius: var(--radius-xl);
       overflow: hidden;
       position: relative;
     }
 
+    .card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.04), transparent 20%),
+        linear-gradient(90deg, rgba(51, 209, 255, 0.06), transparent 18%, transparent 82%, rgba(45, 212, 191, 0.04));
+      opacity: 0.55;
+    }
+
     .hero-copy {
       padding: 42px;
       display: flex;
       flex-direction: column;
-      gap: 24px;
+      gap: 28px;
       min-height: 540px;
       justify-content: space-between;
+      background:
+        radial-gradient(circle at top right, rgba(51, 209, 255, 0.12), transparent 34%),
+        linear-gradient(180deg, rgba(13, 23, 34, 0.95), rgba(10, 21, 32, 0.92));
+    }
+
+    .hero-main {
+      display: grid;
+      gap: 18px;
+    }
+
+    .hero-topline {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
     }
 
     .eyebrow {
@@ -174,34 +224,99 @@
       width: fit-content;
       border-radius: 999px;
       padding: 8px 14px;
-      background: rgba(12, 124, 115, 0.1);
+      background: rgba(51, 209, 255, 0.08);
       color: var(--accent);
-      font-size: 0.84rem;
-      font-weight: 700;
+      font-size: 0.78rem;
+      font-family: "IBM Plex Mono", monospace;
+      font-weight: 500;
       letter-spacing: 0.04em;
       text-transform: uppercase;
+      border: 1px solid rgba(51, 209, 255, 0.22);
+    }
+
+    .status-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 0.76rem;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      background: rgba(8, 18, 27, 0.84);
+      border: 1px solid rgba(102, 149, 194, 0.18);
+    }
+
+    .status-chip::before {
+      content: "";
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--accent-3);
+      box-shadow: 0 0 14px rgba(126, 231, 135, 0.42);
     }
 
     .hero h1 {
       margin: 0;
-      font-family: "Instrument Serif", serif;
-      font-size: clamp(3.4rem, 9vw, 6.8rem);
-      line-height: 0.94;
-      letter-spacing: -0.045em;
-      font-weight: 400;
+      font-size: clamp(3.2rem, 8vw, 5.8rem);
+      line-height: 0.92;
+      letter-spacing: -0.06em;
+      font-weight: 700;
+      text-transform: uppercase;
     }
 
     .hero h1 span {
       display: block;
       color: var(--accent);
+      text-shadow: 0 0 20px rgba(51, 209, 255, 0.16);
+    }
+
+    .hero-role {
+      margin: 0;
+      font-size: 1.02rem;
+      font-family: "IBM Plex Mono", monospace;
+      color: var(--accent-2);
+      letter-spacing: 0.01em;
+      text-transform: uppercase;
     }
 
     .lede {
       max-width: 62ch;
-      font-size: 1.08rem;
-      line-height: 1.78;
+      font-size: 1.04rem;
+      line-height: 1.72;
       color: var(--muted);
       margin: 0;
+    }
+
+    .signal-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .signal-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: rgba(8, 18, 27, 0.82);
+      border: 1px solid rgba(102, 149, 194, 0.14);
+      color: var(--muted);
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    .signal-item::before {
+      content: "";
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--accent);
     }
 
     .pill-row {
@@ -216,24 +331,26 @@
       gap: 8px;
       padding: 11px 15px;
       border-radius: 999px;
-      background: rgba(255, 255, 255, 0.72);
-      border: 1px solid rgba(28, 42, 46, 0.08);
+      background: rgba(19, 34, 50, 0.76);
+      border: 1px solid rgba(102, 149, 194, 0.18);
       color: var(--ink);
-      font-weight: 600;
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 0.88rem;
+      font-weight: 500;
       transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
     }
 
     .pill:hover,
     .pill:focus-visible {
       transform: translateY(-2px);
-      box-shadow: 0 12px 24px rgba(28, 42, 46, 0.09);
-      border-color: rgba(12, 124, 115, 0.32);
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.16);
+      border-color: rgba(51, 209, 255, 0.34);
     }
 
     .pill.muted {
       color: var(--muted);
-      font-weight: 700;
-      background: rgba(255, 255, 255, 0.45);
+      font-weight: 500;
+      background: rgba(8, 18, 27, 0.84);
     }
 
     .hero-note {
@@ -245,20 +362,25 @@
     .metric {
       padding: 16px 18px;
       border-radius: var(--radius-md);
-      background: linear-gradient(180deg, rgba(255, 255, 255, 0.88), rgba(255, 255, 255, 0.65));
-      border: 1px solid rgba(28, 42, 46, 0.08);
+      background: linear-gradient(180deg, rgba(19, 34, 50, 0.92), rgba(13, 23, 34, 0.88));
+      border: 1px solid rgba(102, 149, 194, 0.14);
+      position: relative;
     }
 
     .metric strong {
       display: block;
-      font-size: 1.2rem;
+      font-size: 0.76rem;
+      font-family: "IBM Plex Mono", monospace;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
       margin-bottom: 6px;
+      color: var(--accent);
     }
 
     .metric span {
-      color: var(--muted);
-      font-size: 0.92rem;
-      line-height: 1.4;
+      color: #f3f8fc;
+      font-size: 1rem;
+      line-height: 1.5;
     }
 
     .hero-side {
@@ -267,18 +389,19 @@
       flex-direction: column;
       gap: 18px;
       background:
-        radial-gradient(circle at top right, rgba(240, 180, 76, 0.18), transparent 28%),
-        linear-gradient(180deg, rgba(255, 250, 241, 0.95), rgba(247, 239, 224, 0.92));
+        radial-gradient(circle at top right, rgba(45, 212, 191, 0.14), transparent 28%),
+        linear-gradient(180deg, rgba(10, 21, 32, 0.96), rgba(13, 23, 34, 0.94));
     }
 
     .side-panel {
       padding: 24px;
       border-radius: 26px;
-      background: rgba(28, 42, 46, 0.95);
-      color: #f7f1e7;
+      background: rgba(6, 15, 23, 0.96);
+      color: #f3f8fc;
       position: relative;
       overflow: hidden;
       min-height: 230px;
+      border: 1px solid rgba(51, 209, 255, 0.16);
     }
 
     .side-panel::after {
@@ -289,23 +412,32 @@
       right: -40px;
       bottom: -70px;
       border-radius: 50%;
-      background: radial-gradient(circle, rgba(240, 180, 76, 0.4), transparent 70%);
+      background: radial-gradient(circle, rgba(51, 209, 255, 0.22), transparent 70%);
     }
 
     .side-panel h2,
     .stack h2,
     .section-heading h2 {
       margin: 0 0 12px;
-      font-family: "Instrument Serif", serif;
-      font-size: 2rem;
-      font-weight: 400;
-      letter-spacing: -0.03em;
+      font-size: 1.85rem;
+      font-weight: 700;
+      letter-spacing: -0.04em;
+    }
+
+    .side-panel-label {
+      display: inline-block;
+      margin-bottom: 10px;
+      color: var(--accent);
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 0.76rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
     }
 
     .side-panel p {
       margin: 0;
       line-height: 1.72;
-      color: rgba(247, 241, 231, 0.8);
+      color: rgba(216, 228, 240, 0.8);
     }
 
     .mini-grid {
@@ -317,14 +449,15 @@
     .mini-card {
       padding: 20px;
       border-radius: 24px;
-      background: rgba(255, 255, 255, 0.72);
-      border: 1px solid rgba(28, 42, 46, 0.08);
+      background: rgba(19, 34, 50, 0.72);
+      border: 1px solid rgba(102, 149, 194, 0.12);
     }
 
     .mini-card strong {
       display: block;
       margin-bottom: 8px;
-      font-size: 0.92rem;
+      font-size: 0.8rem;
+      font-family: "IBM Plex Mono", monospace;
       color: var(--accent);
       text-transform: uppercase;
       letter-spacing: 0.06em;
@@ -333,13 +466,15 @@
     .mini-card p {
       margin: 0;
       color: var(--muted);
-      line-height: 1.65;
-      font-size: 0.98rem;
+      line-height: 1.55;
+      font-size: 0.94rem;
     }
 
     .section {
       margin-top: 26px;
       padding: 34px;
+      background:
+        linear-gradient(180deg, rgba(11, 21, 31, 0.96), rgba(10, 19, 29, 0.92));
     }
 
     .section-heading {
@@ -348,6 +483,8 @@
       justify-content: space-between;
       gap: 18px;
       margin-bottom: 24px;
+      padding-bottom: 18px;
+      border-bottom: 1px solid rgba(102, 149, 194, 0.14);
     }
 
     .section-heading p {
@@ -366,50 +503,89 @@
     .timeline-card {
       padding: 24px;
       border-radius: 26px;
-      background: rgba(255, 255, 255, 0.74);
-      border: 1px solid rgba(28, 42, 46, 0.08);
+      background:
+        linear-gradient(180deg, rgba(16, 30, 44, 0.96), rgba(11, 21, 31, 0.94));
+      border: 1px solid rgba(102, 149, 194, 0.16);
       position: relative;
+      overflow: hidden;
     }
 
     .timeline-card::before {
       content: "";
       position: absolute;
-      top: 26px;
-      left: 24px;
-      width: 12px;
-      height: 12px;
+      inset: 0 auto auto 0;
+      width: 100%;
+      height: 1px;
+      background: linear-gradient(90deg, rgba(51, 209, 255, 0.55), transparent 72%);
+    }
+
+    .timeline-card::after {
+      content: "";
+      position: absolute;
+      top: 18px;
+      right: 18px;
+      width: 10px;
+      height: 10px;
       border-radius: 50%;
-      background: var(--accent);
-      box-shadow: 0 0 0 8px rgba(12, 124, 115, 0.12);
+      background: rgba(51, 209, 255, 0.85);
+      box-shadow: 0 0 0 6px rgba(51, 209, 255, 0.08);
     }
 
     .timeline-card h3 {
-      margin: 0 0 8px 28px;
+      margin: 0 0 10px;
       font-size: 1.18rem;
       line-height: 1.35;
+      color: #f3f8fc;
     }
 
     .timeline-card .meta {
-      margin-left: 28px;
       display: flex;
       flex-wrap: wrap;
-      gap: 10px 14px;
+      gap: 8px;
       color: var(--muted);
-      font-size: 0.92rem;
-      margin-bottom: 14px;
+      font-size: 0.8rem;
+      font-family: "IBM Plex Mono", monospace;
+      margin-bottom: 16px;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    .timeline-card .meta span {
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: rgba(8, 18, 27, 0.88);
+      border: 1px solid rgba(102, 149, 194, 0.14);
     }
 
     .timeline-card p {
-      margin: 0 0 12px;
+      margin: 0 0 14px;
       color: var(--muted);
       line-height: 1.68;
     }
 
     .timeline-card ul {
       margin: 0;
-      padding-left: 18px;
+      padding-left: 0;
+      list-style: none;
       color: var(--muted);
       line-height: 1.7;
+    }
+
+    .timeline-card li {
+      position: relative;
+      padding-left: 18px;
+    }
+
+    .timeline-card li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0.78em;
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--accent-2);
+      box-shadow: 0 0 0 5px rgba(45, 212, 191, 0.08);
     }
 
     .timeline-card li + li {
@@ -426,12 +602,24 @@
       min-height: 100%;
       padding: 24px;
       border-radius: 28px;
-      border: 1px solid rgba(28, 42, 46, 0.08);
+      border: 1px solid rgba(102, 149, 194, 0.16);
       background:
-        linear-gradient(180deg, rgba(255, 255, 255, 0.85), rgba(253, 247, 238, 0.78));
+        linear-gradient(180deg, rgba(15, 29, 43, 0.96), rgba(10, 20, 30, 0.94));
       display: flex;
       flex-direction: column;
       gap: 16px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .project-card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      background:
+        linear-gradient(135deg, rgba(51, 209, 255, 0.08), transparent 30%),
+        linear-gradient(180deg, transparent 70%, rgba(45, 212, 191, 0.04));
     }
 
     .project-card .tag {
@@ -439,17 +627,20 @@
       border-radius: 999px;
       padding: 8px 12px;
       font-size: 0.78rem;
-      font-weight: 800;
+      font-family: "IBM Plex Mono", monospace;
+      font-weight: 500;
       letter-spacing: 0.06em;
       text-transform: uppercase;
-      background: rgba(28, 42, 46, 0.08);
-      color: var(--ink);
+      background: rgba(8, 18, 27, 0.9);
+      color: var(--accent);
+      border: 1px solid rgba(51, 209, 255, 0.18);
     }
 
     .project-card h3 {
       margin: 0;
       font-size: 1.22rem;
       line-height: 1.35;
+      color: #f3f8fc;
     }
 
     .project-card p {
@@ -468,8 +659,20 @@
     .stack {
       padding: 28px;
       border-radius: 28px;
-      background: rgba(255, 255, 255, 0.74);
-      border: 1px solid rgba(28, 42, 46, 0.08);
+      background: linear-gradient(180deg, rgba(14, 27, 40, 0.96), rgba(10, 20, 30, 0.94));
+      border: 1px solid rgba(102, 149, 194, 0.16);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .stack::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background: linear-gradient(90deg, rgba(45, 212, 191, 0.46), transparent 76%);
     }
 
     .skill-groups {
@@ -481,14 +684,15 @@
     .skill-group {
       padding: 18px;
       border-radius: 22px;
-      background: rgba(245, 239, 228, 0.82);
-      border: 1px solid rgba(28, 42, 46, 0.08);
+      background: rgba(8, 18, 27, 0.86);
+      border: 1px solid rgba(102, 149, 194, 0.14);
     }
 
     .skill-group strong {
       display: block;
       margin-bottom: 10px;
-      font-size: 0.92rem;
+      font-size: 0.82rem;
+      font-family: "IBM Plex Mono", monospace;
       text-transform: uppercase;
       letter-spacing: 0.06em;
       color: var(--accent);
@@ -512,14 +716,16 @@
       align-items: center;
       justify-content: space-between;
       gap: 12px;
-      padding: 14px 0;
-      border-bottom: 1px solid var(--line);
+      padding: 14px 16px;
+      border: 1px solid rgba(102, 149, 194, 0.12);
+      border-radius: 18px;
+      background: rgba(8, 18, 27, 0.76);
     }
 
-    .language-row:last-child,
-    .focus-item:last-child {
-      border-bottom: 0;
-      padding-bottom: 0;
+    .focus-item strong,
+    .language-row strong {
+      color: #f3f8fc;
+      font-size: 0.96rem;
     }
 
     .language-row span,
@@ -535,20 +741,21 @@
       justify-content: space-between;
       gap: 18px;
       border-radius: 28px;
-      background: rgba(28, 42, 46, 0.95);
-      color: #f7f1e7;
+      background: linear-gradient(180deg, rgba(8, 18, 27, 0.98), rgba(10, 21, 32, 0.96));
+      color: #f3f8fc;
+      border: 1px solid rgba(102, 149, 194, 0.16);
     }
 
     .footer p {
       margin: 0;
-      color: rgba(247, 241, 231, 0.78);
+      color: rgba(216, 228, 240, 0.78);
       line-height: 1.65;
     }
 
     .footer .pill {
-      background: rgba(255, 255, 255, 0.08);
-      border-color: rgba(255, 255, 255, 0.12);
-      color: #fff;
+      background: rgba(19, 34, 50, 0.76);
+      border-color: rgba(102, 149, 194, 0.18);
+      color: #f3f8fc;
     }
 
     [data-reveal] {
@@ -598,6 +805,10 @@
       .project-card,
       .timeline-card {
         padding: 24px;
+      }
+
+      .hero-topline {
+        align-items: flex-start;
       }
 
       .hero-note,
@@ -651,14 +862,23 @@
     <main>
       <section class="hero">
         <article class="card hero-copy" data-reveal>
-          <div>
-            <div class="eyebrow">Available for software and network engineering paths</div>
+          <div class="hero-main">
+            <div class="hero-topline">
+              <div class="eyebrow">UPM x EURECOM</div>
+              <div class="status-chip">Open to graduate roles</div>
+            </div>
             <h1>Enrique <span>Garcia de Alfonso</span></h1>
+            <p class="hero-role">Software systems, networking, cloud, IoT, and 5G</p>
             <p class="lede">
-              Dual Master's student in Telecommunication Engineering at Universidad Politécnica de Madrid and EURECOM,
-              building a profile at the intersection of software systems, computer networks, IoT platforms, cloud
-              infrastructure, and 5G environments.
+              Dual Master's student in Telecommunication Engineering at UPM and EURECOM with a profile centered on
+              software development, connected systems, cloud infrastructure, and telecom environments.
             </p>
+            <div class="signal-row" aria-label="Core focus areas">
+              <span class="signal-item">Backend systems</span>
+              <span class="signal-item">Network software</span>
+              <span class="signal-item">Linux environments</span>
+              <span class="signal-item">IoT and telemetry</span>
+            </div>
           </div>
 
           <div class="pill-row">
@@ -668,45 +888,46 @@
 
           <div class="hero-note">
             <div class="metric">
-              <strong>Madrid / Sophia Antipolis</strong>
-              <span>Academic and technical experience across Spain and France.</span>
+              <strong>Base</strong>
+              <span>Madrid / Sophia Antipolis</span>
             </div>
             <div class="metric">
-              <strong>IoT to 5G</strong>
-              <span>Hands-on work from telemetry systems to network function integration.</span>
+              <strong>Range</strong>
+              <span>IoT telemetry to 5G integration</span>
             </div>
             <div class="metric">
-              <strong>Software-first mindset</strong>
-              <span>Comfortable with backend logic, debugging, Linux, SQL, Docker, and cloud workflows.</span>
+              <strong>Tooling</strong>
+              <span>Linux, Docker, SQL, Node.js, Python</span>
             </div>
           </div>
         </article>
 
         <aside class="card hero-side" data-reveal>
           <section class="side-panel">
+            <span class="side-panel-label">Profile Summary</span>
             <h2>What I bring</h2>
             <p>
-              Engineer focused on software, networks, and telecom systems, with hands-on experience in backend work,
-              debugging, telemetry, and 5G environments.
+              Telecommunications engineer with hands-on experience in backend work, debugging, telemetry systems, and
+              software-driven network environments.
             </p>
           </section>
 
           <div class="mini-grid">
             <article class="mini-card">
               <strong>Current focus</strong>
-              <p>IoT, intelligent networks, software-based telecom systems, and cloud-native tooling.</p>
+              <p>IoT, intelligent networks, software-based telecom systems, and cloud tooling.</p>
             </article>
             <article class="mini-card">
-              <strong>Technical style</strong>
-              <p>Structured, analytical, and comfortable moving from architecture to implementation and validation.</p>
+              <strong>Approach</strong>
+              <p>Structured, analytical, and comfortable moving from implementation to validation.</p>
             </article>
             <article class="mini-card">
-              <strong>Core environment</strong>
-              <p>Linux, Git, Docker, SQL, Node.js, Python, and network-oriented experimentation.</p>
+              <strong>Core stack</strong>
+              <p>Linux, Git, Docker, SQL, Node.js, Python.</p>
             </article>
             <article class="mini-card">
               <strong>Languages</strong>
-              <p>Spanish native, English C1, French B1.</p>
+              <p>Spanish native. English C1. French B1.</p>
             </article>
           </div>
         </aside>
@@ -727,7 +948,7 @@
           <article class="timeline-card">
             <h3>Software Developer Intern</h3>
             <div class="meta">
-              <span>Universidad Politécnica de Madrid</span>
+              <span>Universidad Politecnica de Madrid</span>
               <span>Sep 2024 - Jan 2026</span>
               <span>Madrid, Spain</span>
             </div>
@@ -763,7 +984,7 @@
           <article class="timeline-card">
             <h3>BSc in Telecommunication Technologies and Services Engineering</h3>
             <div class="meta">
-              <span>Universidad Politécnica de Madrid</span>
+              <span>Universidad Politecnica de Madrid</span>
               <span>Sep 2018 - Sep 2023</span>
               <span>Madrid, Spain</span>
             </div>
@@ -934,7 +1155,7 @@
 
     <footer class="footer card" id="contact" data-reveal>
       <div>
-        <h2 style="margin: 0 0 10px; font-family: 'Instrument Serif', serif; font-size: 2rem; font-weight: 400;">Contact</h2>
+        <h2 style="margin: 0 0 10px; font-size: 2rem; font-weight: 700; letter-spacing: -0.04em;">Contact</h2>
         <p>
           For opportunities related to software engineering, network systems, cloud, IoT, or telecommunications.
         </p>
